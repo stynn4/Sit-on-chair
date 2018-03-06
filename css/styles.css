@@ -36,7 +36,7 @@ ul  {
     list-style: none;
     position: relative;
 }
-header > div > nav > ul > li {
+ul > li {
     float: left;
     text-transform: uppercase;
     font-size: 14px;
@@ -48,9 +48,10 @@ ul > li > ul {
     background: rgb(40, 40, 40);
     width: 120px;
     padding-left: 10px;
-    position:relative;
+    position:absolute;
     left: -10px;
     display: none;
+}
 }
 ul > li:hover > ul  {
     display:block;
@@ -61,24 +62,47 @@ li > a   {
     color: rgb(220, 220, 220);
 }
 /*end of header*/
-section:first-of-type > div  {
-    
+section:first-of-type   {
+    background: yellow;
+    height: 500px;
 }
-img, article    {
-    display: inline-block;
-    border: 1px solid green;
+section:first-of-type > div  {
+    padding-top: 150px;
+    background: gray;
+}
+section > div > div {
     width:50%;
+    background:lightblue;
+    display:inline-block;
+}
+img, article    {   ;
+    border: 1px solid green;
+}
+img {
+    float:right;
 }
 article {
     text-align: center;
-    height: 470px;
     width:50%;
+    height: 400px;
+    display:inline-block;
+    vertical-align: middle;
 }
 h1  {
     text-transform: uppercase;
+    font-size: 2rem;
+    padding: 15px 0;
+}
+.firstArticle > p   {
+    padding: 0 20px;
 }
 .firstArticle > a   {
     background: rgb(255, 158, 57);
     border-radius: 5px;
     padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(220, 220, 220);
+    font-weight: bold;
+
 }
