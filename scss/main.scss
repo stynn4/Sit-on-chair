@@ -16,6 +16,7 @@
 }
 $colors: (main: rgb(0, 214, 180),
         header: rgb(0, 0, 0),
+        font: rgb(250, 250, 250),
         background: rgb(255, 255, 255),
         arrowBackground: transparent,
         forms: rgb(0, 205, 170),
@@ -27,13 +28,14 @@ $colors: (main: rgb(0, 214, 180),
 );
 @mixin arrow($colors) {
   &::before {
-
+    content: '';
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid yellow;
-
+    border-bottom: 10px solid $colors;
+    margin: -9px 0 0 48px;
+    position:absolute;
   }
 }
 /*header*/
@@ -44,11 +46,11 @@ header  {
   background: map-get($colors, 'header');
 }
 header > div > h4  {
-  color: rgb(220, 220, 220);
   text-transform: uppercase;
   line-height: 50px;
   float: left;
   margin-left: 5px;
+  color: map_get($colors, 'font');
 }
 span    {
   color: map-get($colors, 'main');
@@ -64,17 +66,19 @@ ul > li {
   float: left;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 50px;
   width: 120px;
   padding-left: 10px;
   font-weight: bolder;
+  line-height: 50px;
+  color: map_get($colors, 'font');
 }
 ul > li > ul {
   width: 120px;
   height: 100px;
-  padding-left: 10px;
   position:absolute;
-  left: -10px;
+  margin: 6px 0 0 -18px;
+  @include arrow(map_get($colors, 'header'));
+  display: none;
 }
 
 ul > li:hover > ul  {
@@ -83,24 +87,15 @@ ul > li:hover > ul  {
 li > a   {
   text-decoration: none;
   display: block;
-  color: rgb(220, 220, 220);
-}
-#arrow {
-  background: map_get($colors, 'transparent');
-  height: 15px;
-}
-#arrow div {
-  height: 0;
-  width: 0;
-  border-bottom: 10px solid map_get($colors, 'circle');
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  margin-left: 25px;
+  color: map_get($colors, 'font');;
 }
 ul > li > ul > li {
   text-transform: capitalize;
   background: map-get($colors, 'header');
-
+  line-height: 16px;
+  padding: 10px 0px 0 12px;
+  height: 35px;
+  width: 132px;
 }
 /*end of header*/
 section:first-of-type   {
