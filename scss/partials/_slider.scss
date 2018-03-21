@@ -4,6 +4,35 @@
   padding:0;
   font-family: 'Montserrat', sans-serif;
 }
+@font-face {
+  font-family: 'RalewayThin';
+  src: local('Raleway Thin'), local('Raleway-Thin'),
+  url('Raleway-Thin.woff2') format('woff2'),
+  url('Raleway-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RalewaySemiBold';
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'),
+  url('Raleway-SemiBold.woff2') format('woff2'),
+  url('Raleway-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RalewayRegular';
+  src: local('Raleway'), local('Raleway-Regular'),
+  url('Raleway-Regular.woff2') format('woff2'),
+  url('Raleway-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+$fonts: (regular: 'RalewayRegular',
+        semiBold: 'RalewaySemiBold',
+        thin: 'RalewayThin'
+);
 .container  {
   width:1200px;
   margin: 0 auto;
@@ -39,14 +68,36 @@ $colors: (main: rgb(0, 214, 180),
   background: -moz-linear-gradient(0deg, rgb(202, 204, 212) 0%, rgb(248, 248, 248) 100%);
   background: linear-gradient(0deg, rgb(202, 204, 212) 0%, rgb(248, 248, 248) 100%);
 }
-  /*slider*/
+@mixin sliderArrow() {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  position:absolute;
+  color: map_get($colors, 'main');
+}
 
+
+  /*slider*/
 section:first-of-type   {
   @include sliderHeight;
   @include sliderGradient;
 }
-.slider > div, article    {
-  border: 1px solid red;
+.slider {
+  @include clearFix();
+}
+.slider::before {
+  @include sliderArrow();
+  border-right: 37px solid map_get($colors, 'main');
+  margin: 257px 0 0 11px;
+
+
+}
+.slider::after {
+  @include sliderArrow();
+  border-left: 37px solid map_get($colors, 'main');
+  margin: 257px 0 0 1121px;
 }
 .slider > div {
   float: left;
@@ -58,7 +109,6 @@ img {
 }
 article {
   text-align: center;
-  @include sliderHeight;;
   width: 60%;
   vertical-align: middle;
   float:right;
@@ -66,17 +116,21 @@ article {
 h1  {
   text-transform: uppercase;
   font-size: 2.5rem;
-  margin: 60px 0 0 0;
+  margin: 148px 0 0 -135px;
 }
 article:first-of-type > p   {
-  padding: 0 20px;
+  padding: 34px 170px 0 60px;
+  line-height: 23px;
+  margin-bottom: 50px;
 }
 article:first-of-type > a   {
-  background: rgb(255, 158, 57);
-  border-radius: 5px;
-  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+  padding: 15px 32px 12px 45px;
+  margin-left: -125px;
+  font-size: 25px;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(220, 220, 220);
-  font-weight: bold;
+  background: map_get($colors, 'main');
+  color: map_get($colors, 'font');
+  font-family: map_get($fonts, 'RalewayThin');
 }
