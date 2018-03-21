@@ -37,6 +37,9 @@ h1  {
   font-size: 2.5rem;
   margin: 148px 0 0 -135px;
 }
+h1 > span {
+  color: map-get($colors, 'main');
+}
 article:first-of-type > p   {
   padding: 34px 170px 0 60px;
   line-height: 23px;

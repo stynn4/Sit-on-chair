@@ -15,7 +15,7 @@ header > div > h4  {
   margin-left: 5px;
   color: map_get($colors, 'font');
 }
-span    {
+h4 > span    {
   color: map-get($colors, 'main');
 }
 nav {

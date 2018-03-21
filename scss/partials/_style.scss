@@ -42,7 +42,16 @@
   height: 0;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
-  position:absolute;
+  position: absolute;
   color: map_get($colors, 'main');
 }
-
+/*div_secondSection*/
+@mixin divSecondSection() {
+  height: 250px;
+  width:364px;
+  margin-right: 29px;
+  display: flex;
+}
+$images: (secondSectionImg1: url("../images/box1_img.jpg"),
+          secondSectionImg2: url("../images/box2_img.jpg")
+);
