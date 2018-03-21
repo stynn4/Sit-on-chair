@@ -1,0 +1,149 @@
+*   {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+}
+.container  {
+  width:1200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.clearfix::after   {
+  content:'';
+  clear:both;
+  display:block;
+}
+$colors: (main: rgb(0, 214, 180),
+        header: rgb(0, 0, 0),
+        background: rgb(255, 255, 255),
+        arrowBackground: transparent,
+        forms: rgb(0, 205, 170),
+        circle: rgb(193, 193, 193),
+        circleBackground: rgb(249, 249, 249),
+        priceUnderline: rgb(0, 195, 157),
+        formsBuy: rgb(227, 227, 227),
+        formsServis: rgb(241, 241, 241),
+);
+@mixin arrow($colors) {
+  &::before {
+
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid yellow;
+
+  }
+}
+/*header*/
+
+header  {
+  width: 100%;
+  height: 46px;
+  background: map-get($colors, 'header');
+}
+header > div > h4  {
+  color: rgb(220, 220, 220);
+  text-transform: uppercase;
+  line-height: 50px;
+  float: left;
+  margin-left: 5px;
+}
+span    {
+  color: map-get($colors, 'main');
+}
+nav {
+  float:right;
+}
+ul  {
+  list-style: none;
+  position: relative;
+}
+ul > li {
+  float: left;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 50px;
+  width: 120px;
+  padding-left: 10px;
+  font-weight: bolder;
+}
+ul > li > ul {
+  width: 120px;
+  height: 100px;
+  padding-left: 10px;
+  position:absolute;
+  left: -10px;
+}
+
+ul > li:hover > ul  {
+  display:block;
+}
+li > a   {
+  text-decoration: none;
+  display: block;
+  color: rgb(220, 220, 220);
+}
+#arrow {
+  background: map_get($colors, 'transparent');
+  height: 15px;
+}
+#arrow div {
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid map_get($colors, 'circle');
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-left: 25px;
+}
+ul > li > ul > li {
+  text-transform: capitalize;
+  background: map-get($colors, 'header');
+
+}
+/*end of header*/
+section:first-of-type   {
+  background: yellow;
+  height: 500px;
+}
+section:first-of-type > div  {
+  padding-top: 150px;
+  background: gray;
+}
+section > div > div {
+  width:50%;
+  background:lightblue;
+  display:inline-block;
+}
+img, article    {   ;
+  border: 1px solid green;
+}
+img {
+  float:right;
+}
+article {
+  text-align: center;
+  width:50%;
+  height: 400px;
+  display:inline-block;
+  vertical-align: middle;
+}
+h1  {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 15px 0;
+}
+.firstArticle > p   {
+  padding: 0 20px;
+}
+.firstArticle > a   {
+  background: rgb(255, 158, 57);
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(220, 220, 220);
+  font-weight: bold;
+
+}
