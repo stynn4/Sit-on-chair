@@ -142,23 +142,20 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   letter-spacing: 2px;
   margin: 3px 0 0 -10px;
 }
-@mixin priceDivBuy {
+@mixin priceDivBuyWarrancy {
   height: 46px;
   width: 100%;
   position: absolute;
-  top: 269px;
-  background:yellow;
   font-size: 25px;
-  padding: 8px 0 0 46px;
   letter-spacing: 1px;
 }
-@mixin priceDivServis {
+@mixin priceDivServisAdvice {
     height: 53px;
     width: 100%;
     position: absolute;
-    top: 314px;
     font-size: 28px;
-    padding: 9px 0 0 139px;
+
+
 }
 @mixin priceJoin {
     width: 134px;
