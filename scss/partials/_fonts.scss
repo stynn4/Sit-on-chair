@@ -35,9 +35,17 @@
 @font-face {
   font-family: 'Raleway';
   src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'),
-  url('Raleway-ExtraLight.woff2') format('woff2'),
-  url('Raleway-ExtraLight.woff') format('woff');
+  url('../fonts/Raleway-ExtraLight.woff2') format('woff2'),
+  url('../fonts/Raleway-ExtraLight.woff') format('woff');
   font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RalewayBold';
+  src: local('Raleway Bold'), local('Raleway-Bold'),
+  url('Raleway-Bold.woff2') format('woff2'),
+  url('Raleway-Bold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -45,5 +53,6 @@ $fonts: (regular: 'RalewayRegular',
         semiBold: 'RalewaySemiBold',
         thin: 'RalewayThin',
         medium: 'RalewayMedium',
-        extraLight: 'RalewayExtraLight'
+        extraLight: 'RalewayExtraLight',
+        bold: 'RalewayBold'
 );

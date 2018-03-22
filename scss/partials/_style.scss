@@ -98,3 +98,77 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   margin-left: -15px;
   margin-top: -15px;
 }
+@mixin priceHeader {
+  text-transform: uppercase;
+  position:absolute;
+  margin-top: 30px;
+  padding: 0 0 0 0;
+  font-family: map_get($fonts, 'thin');
+  font-weight: bolder;
+  font-size: 1.60rem;
+}
+@mixin priceCircle {
+  width: 140px;
+  height: 140px;
+  background: map_get($colors, 'background');
+  border-radius: 50%;
+  position: absolute;
+  padding: 23px 0 0 34px;
+  left: 31%;
+  top: 16%;
+  font-size: 55px;
+  font-family: map_get($fonts, 'bold');
+  font-weight: bolder;
+}
+@mixin priceCircleElements {
+  font-family: map_get($fonts, 'bold');
+  font-weight: bolder;
+}
+
+@mixin priceCircleSub {
+  margin:15px 0 0 4px;
+  position:absolute;
+}
+@mixin priceCircleSup {
+  font-size: 20px;
+  margin: 9px 0 0 27px;
+  position:absolute;
+}
+@mixin priceCircleSpan {
+  font-size: 16px;
+  text-transform: uppercase;
+  position: absolute;
+  line-height: 16px;
+  letter-spacing: 2px;
+  margin: 3px 0 0 -10px;
+}
+@mixin priceDivBuy {
+  height: 46px;
+  width: 100%;
+  position: absolute;
+  top: 269px;
+  background:yellow;
+  font-size: 25px;
+  padding: 8px 0 0 46px;
+  letter-spacing: 1px;
+}
+@mixin priceDivServis {
+    height: 53px;
+    width: 100%;
+    position: absolute;
+    top: 314px;
+    font-size: 28px;
+    padding: 9px 0 0 139px;
+}
+@mixin priceJoin {
+    width: 134px;
+    height: 37px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color:map_get($colors, 'font');
+    position:absolute;
+    padding: 9px 0 0 30px;
+    margin: 490px 0 0 114px;
+    text-decoration: none;
+    border-radius: 7px;
+}
