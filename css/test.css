@@ -1,0 +1,14 @@
+#box1, #box2, #box3 {
+
+    width: 350px;
+    height: 250px;
+    background: lightcoral;
+
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    border-bottom: 5px solid black;
+}
