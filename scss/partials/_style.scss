@@ -144,7 +144,6 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   letter-spacing: 2px;
 }
 @mixin priceDivBuyWarrancy {
-  height: 46px;
   width: 100%;
   position: absolute;
   font-size: 25px;
@@ -155,18 +154,14 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
     width: 100%;
     position: absolute;
     font-size: 28px;
-
-
 }
 @mixin priceJoin {
     width: 134px;
     height: 37px;
     font-size: 18px;
     text-transform: uppercase;
-    color:map_get($colors, 'font');
     position:absolute;
     padding: 9px 0 0 30px;
-    margin: 490px 0 0 114px;
     text-decoration: none;
     border-radius: 7px;
 }
