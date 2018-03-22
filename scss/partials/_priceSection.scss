@@ -1,0 +1,35 @@
+/*priceSection*/
+section:nth-of-type(3) {
+  height: 795px;
+  background: yellowgreen;
+  /*background: map_get($colors, 'sectionBackground ');
+*/
+}
+.thirdSection div:first-of-type p {
+  height: 45px;
+  width: 352px;
+  padding: 0 0 0 0;
+  margin: 45px 0 0 4px;
+  text-transform: uppercase;
+  font-family: map_get($fonts, 'RalewaySemiBold');
+  font-size: 25px;
+  position: absolute;
+  border-bottom: 9px solid map_get($colors, 'priceBorder');
+}
+.thirdSection > div:first-of-type {
+  width: 100%;
+  height: 90px;
+  background: coral;
+}
+.thirdSection > div:last-of-type {
+  width: 100%;
+  height: 705px;
+  background: cornflowerblue;
+  @include sectionFlex();
+}
+.thirdSection div:nth-of-type(2) div {
+  width: 350px;
+  height: 250px;
+  background: darkblue;
+  margin: 0 0 0 0;
+}

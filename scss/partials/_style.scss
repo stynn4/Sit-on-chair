@@ -46,7 +46,7 @@
   color: map_get($colors, 'main');
 }
 /*div_secondSection*/
-@mixin secondSectionFlex {
+@mixin sectionFlex {
   display: flex;
   justify-content: space-between;
 }
