@@ -3,17 +3,10 @@ section:nth-of-type(2) > div {
   padding: 28px 0 0 3px;
 }
 .secondSection {
-  display: flex;
-  justify-content: space-between;
+  @include secondSectionFlex();
 }
 .secondSection > div {
   @include divSecondSection();
-}
-.secondSection > div:nth-of-type(3) {
-  width: 374px;
-  height: 278px;
-  margin-left: -3px;
-  background: lightblue;
 }
 .secondSection > div:first-of-type {
   background-image: map_get($images, 'secondSectionImg1');
@@ -23,28 +16,50 @@ section:nth-of-type(2) > div {
   background-image: map_get($images, 'secondSectionImg2');
   background-size: contain;
 }
+.secondSection > div:nth-of-type(3) {
+  width: 374px;
+  height: 278px;
+  margin-left: -3px;
+  border: 1px solid map_get($colors, 'divBorder');
+}
 .divTitle {
-  position: absolute;
-  background: gray;
-  margin: 133px 0 0 0;
-  height: 68px;
-  width: 364px;
-
+  @include divWithTitle();
+}
+div:first-of-type > .divTitle, div:nth-of-type(2) > .divTitle {
+  background: map_get($colors, 'divTitle');
+  margin: 164px 0 0 0;
+}
+div:last-of-type > .divTitle {
+  margin-top: 13px;
 }
 
 .divTitle > p {
-  width: 0;
-  height: 0;
-  margin: 48px 0 0 20px;
-  padding: 0 0 0 0;
-  position:absolute;
-  font-size: 16px;
-  text-transform: capitalize;
-  font-family: map_get($fonts, 'regular');
-  letter-spacing: 2px;
+  @include borderedTitle();
+}
+.divTitle > p:first-letter {
+  @extend %text;
 }
 .divTitle > p > span {
   font-family: map_get($fonts, 'semiBold');
   text-transform: uppercase;
 }
+section:nth-of-type(2) article {
+  width: 374px;
+  height: 50px;
+  margin-top:74px;
+  font-size: 15px;
+  line-height: 24px;
+  position: absolute;
+}
+section:nth-of-type(2) article p {
+  padding: 0 39px 0 18px;
+}
+section:nth-of-type(2) article p:first-of-type{
+  height: 100px;
+}
+section:nth-of-type(2) article p:nth-of-type(2){
+  height: 74px;
+  margin-top: 14px;
+}
+
 

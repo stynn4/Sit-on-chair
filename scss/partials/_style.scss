@@ -46,6 +46,10 @@
   color: map_get($colors, 'main');
 }
 /*div_secondSection*/
+@mixin secondSectionFlex {
+  display: flex;
+  justify-content: space-between;
+}
 @mixin divSecondSection() {
   height: 250px;
   width:364px;
@@ -55,3 +59,20 @@
 $images: (secondSectionImg1: url("../images/box1_img.jpg"),
           secondSectionImg2: url("../images/box2_img.jpg")
 );
+@mixin divWithTitle {
+  position: absolute;
+  height: 68px;
+  width: 364px;
+}
+@mixin borderedTitle {
+    width:160px;
+    margin: 17px 0 0 16px;
+    position:absolute;
+    font-size: 16px;
+    font-family: map_get($fonts, 'medium');
+    letter-spacing: 1px;
+    border-bottom: 9px solid map_get($colors, 'main');
+}
+%text {
+  text-transform: uppercase;
+}
