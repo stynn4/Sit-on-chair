@@ -78,6 +78,12 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
 }
 
 /*priceSection*/
+@mixin boxes {
+  width: 363px;
+  height: 552px;
+  margin: 81px 34px 0 2px;
+  position: relative;
+}
 @mixin circle1 {
     height: 62px;
     width: 62px;
@@ -102,7 +108,6 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   text-transform: uppercase;
   position:absolute;
   margin-top: 30px;
-  padding: 0 0 0 0;
   font-family: map_get($fonts, 'thin');
   font-weight: bolder;
   font-size: 1.60rem;
@@ -113,10 +118,7 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   background: map_get($colors, 'background');
   border-radius: 50%;
   position: absolute;
-  padding: 23px 0 0 34px;
   left: 31%;
-  top: 16%;
-  font-size: 55px;
   font-family: map_get($fonts, 'bold');
   font-weight: bolder;
 }
@@ -140,7 +142,6 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   position: absolute;
   line-height: 16px;
   letter-spacing: 2px;
-  margin: 3px 0 0 -10px;
 }
 @mixin priceDivBuyWarrancy {
   height: 46px;

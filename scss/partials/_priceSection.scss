@@ -21,22 +21,26 @@ section:nth-of-type(3) {
   height: 90px;
   background: coral;
 }
+/*three boxes*/
 .thirdSection > div:last-of-type {
   width: 100%;
   height: 705px;
   background: cornflowerblue;
   @include sectionFlex();
 }
-.thirdSection div:nth-of-type(2) > div {
-  width: 363px;
-  height: 552px;
+.thirdSection > div:nth-of-type(2) > div:first-of-type, .thirdSection div:nth-of-type(2) > div:last-of-type{
+  @include boxes();
   background: map_get($colors, 'price1_3Background');
-  margin: 81px 34px 0 2px;
   border: 3px solid map_get($colors, 'divBorder');
-  position:relative;
+}
+.thirdSection > div:nth-of-type(2) > div:nth-of-type(2){
+  @include boxes();
+  background: map_get($colors, 'boxMain');
 }
 /*priceBox*/
-.firstCircle {
+
+/*firstBox*/
+.priceBoxes > div > .firstCircle {
   @include circle1();
   background:map_get($colors, 'background');
   border: 3px solid map_get($colors, 'divBorder');
@@ -45,15 +49,18 @@ section:nth-of-type(3) {
   @include circle2();
   background: map_get($colors, 'circle');
 }
-.priceBoxes h3 {
+.priceBoxes > div:first-of-type > h3, .priceBoxes > div:last-of-type > h3 {
   @include priceHeader();
   left: 31%;
   color: map_get($colors, 'boxMain')
 }
-.circlePrice {
+.priceBoxes > div:first-of-type > .circlePrice, .priceBoxes > div:last-of-type > .circlePrice {
   @include priceCircle();
+  top: 16%;
+  font-size: 55px;
   color: map_get($colors, 'circle');
   border: 3px solid map_get($colors, 'boxBorder');
+  padding: 23px 0 0 34px;
 }
 .circlePrice > sub, .circlePrice > sup, .circlePrice > span {
   @include priceCircleElements();
@@ -66,6 +73,7 @@ section:nth-of-type(3) {
 }
 .circlePrice > span {
   @include priceCircleSpan();
+  margin: 3px 0 0 -10px;
 }
 .priceBoxes > div div:nth-of-type(3) {
   @include priceDivBuyWarrancy();
@@ -87,10 +95,39 @@ section:nth-of-type(3) {
   @include priceJoin();
   background: map_get($colors, 'boxMain');
 }
-.priceBoxes > div:last-of-type h3 {
-  margin: 31px 0 0 -33px;
+/*secondBox*/
+
+#firstCircleMiddle {
+  @include circle1();
+  background: map_get($colors, 'boxMain');
+  border-color: map_get($colors, 'boxMain');
+}
+#firstCircleMiddle .secondCircle {
+  background: map_get($colors, 'price1_3Background');
+}
+.priceBoxes > div:nth-of-type(2) > h3{
+  @include priceHeader();
+  margin: 32px 0 0 85px;
+  color: map_get($colors, 'font')
+}
+#circlePriceMiddle {
+  @include priceCircle();
+  top: 2%;
+  font-size: 55px;
+  color: map_get($colors, 'boxMain');
+  border: 3px solid map_get($colors, 'price1_3Background');
+  padding: 29px 0 0 34px;
+}
+#circlePriceMiddle > sup {
+  font-size: 15px;
   position:absolute;
 }
+#circlePriceMiddle > span {
+  @include priceCircleSpan();
+  margin: 3px 0 0 -10px;
+}
+/*lastBox*/
+
 .priceBoxes > div:last-of-type .circlePrice {
   font-size: 43px;
   margin: 4px 0 0 -8px;
