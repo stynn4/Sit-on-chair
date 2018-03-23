@@ -90,6 +90,17 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
 }
 
 /*priceSection*/
+@mixin textUnderline {
+  height: 45px;
+  width: 352px;
+  padding: 0 0 0 0;
+  text-transform: uppercase;
+  font-family: map_get($fonts, 'regular');
+  font-size: 25px;
+  color: map_get($colors, 'underlineFont');
+  position: absolute;
+  border-bottom: 9px solid map_get($colors, 'priceBorder');
+}
 @mixin boxes {
   width: 363px;
   height: 552px;

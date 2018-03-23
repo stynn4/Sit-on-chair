@@ -1,20 +1,13 @@
 /*priceSection*/
-body section:nth-of-type(3) {
+body > section:nth-of-type(3) {
   height: 795px;
   background: map_get($colors, 'sectionBackground');
   /*background: map_get($colors, 'sectionBackground ');
 */
 }
 .thirdSection div:first-of-type p {
-  height: 45px;
-  width: 352px;
-  padding: 0 0 0 0;
+  @include textUnderline();
   margin: 45px 0 0 4px;
-  text-transform: uppercase;
-  font-family: map_get($fonts, 'semiBold');
-  font-size: 25px;
-  position: absolute;
-  border-bottom: 9px solid map_get($colors, 'priceBorder');
 }
 .thirdSection > div:first-of-type {
   width: 100%;
