@@ -19,23 +19,31 @@ body > section:first-of-type   {
 }
 */
 .arrowLeft {
-  @include sliderArrow();
+  position: absolute;
   margin: 230px 0 0 9px;
 }
 .arrowRight {
-  @include sliderArrow();
+  position:absolute;
   margin: 230px 0 0 1117px;
+}
+.arrowLeft > a, .arrowRight > a {
+  @include sliderArrow();
+  text-decoration: none;
+}
+.arrowLeft > a:hover, .arrowRight > a:hover{
+  @include arrowLink();
 }
 .slider .sliderElement > div {
   float: left;
   width: 40%;
 }
-.sliderElement > div > img {
+#blackChair {
   width: 650px;
   margin: 73px 0 0 -38px;
 }
-.slider > ul {
-  list-style: none;
+#redChair {
+  width: 460px;
+  margin: 105px 0 0 55px;
 }
 .sliderElement > article {
   text-align: center;
@@ -52,10 +60,15 @@ body > section:first-of-type   {
 .sliderElement > article >   h2 > span {
   color: map-get($colors, 'main');
 }
-.sliderElement > article > p   {
+.sliderElement:first-of-type > article > p, .sliderElement:last-of-type > article > p   {
   padding: 34px 188px 0 60px;
   line-height: 23px;
+}
+.sliderElement:first-of-type > article > p {
   margin-bottom: 50px;
+}
+.sliderElement:last-of-type > article > p {
+  margin-bottom: 30px;
 }
 .sliderElement > article > a   {
   border-radius: 8px;
@@ -67,4 +80,13 @@ body > section:first-of-type   {
   background: map_get($colors, 'main');
   color: map_get($colors, 'font');
   font-family: map_get($fonts, 'regular');
+}
+.sliderEffect ul {
+  list-style: none;
+}
+.sliderEffect li {
+  display: none;
+}
+.sliderEffect .visible {
+  display: block;
 }

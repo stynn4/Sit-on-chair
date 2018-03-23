@@ -37,9 +37,13 @@
 }
 /*arrow_slider*/
 @mixin sliderArrow {
-    position:absolute;
-    font-size: 84px;
-    color: map_get($colors, 'main');
+  font-size: 84px;
+  color: map_get($colors, 'main');
+  text-decoration: none;
+}
+@mixin arrowLink {
+  text-decoration: none;
+  color: map_get($colors, 'main');
 }
 /*
 @mixin sliderArrow() {
