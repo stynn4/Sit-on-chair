@@ -34,6 +34,7 @@ section:nth-of-type(3) {
 .thirdSection > div:nth-of-type(2) > div:nth-of-type(2){
   @include boxes();
   background: map_get($colors, 'boxMain');
+  border: 2px solid map_get($colors, 'boxMain');
 }
 /*priceBox*/
 
@@ -130,18 +131,20 @@ section:nth-of-type(3) {
 #secondBox > div:nth-of-type(3) {
   @include priceDivBuyWarrancy();
   height: 46px;
+  background: map_get($colors, 'background');
 }
 #secondBox > div:nth-of-type(4) {
   @include priceDivServisAdvice();
   top: 315px;
+  background: map_get($colors, 'sectionBackground');
 }
 #secondBox > div:last-of-type {
   @include priceDivBuyWarrancy();
   margin: 367px 0 0 0;
   padding: 8px 0 0 90px;
   height: 52px;
-  background: map_get($colors, 'priceDiv1');
-  border-color: map_get($colors, 'priceDiv1');
+  background: map_get($colors, 'background');
+  border-color: map_get($colors, 'background');
 }
 #secondBox > a {
   @include priceJoin();

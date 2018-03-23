@@ -148,12 +148,14 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   position: absolute;
   font-size: 25px;
   letter-spacing: 1px;
+  color: map_get($colors, 'boxesFont');
 }
 @mixin priceDivServisAdvice {
     height: 53px;
     width: 100%;
     position: absolute;
     font-size: 28px;
+  color: map_get($colors, 'boxesFont');
 }
 @mixin priceJoin {
     width: 134px;
