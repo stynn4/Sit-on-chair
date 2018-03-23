@@ -55,5 +55,5 @@ section:first-of-type a   {
   text-transform: uppercase;
   background: map_get($colors, 'main');
   color: map_get($colors, 'font');
-  font-family: map_get($fonts, 'RalewayThin');
+  font-family: map_get($fonts, 'thin');
 }

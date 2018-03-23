@@ -43,10 +43,11 @@ ul > li > ul {
   @include arrow(map_get($colors, 'header'));
   display: none;
 }
-
+/*
 ul > li:hover > ul  {
   display:block;
 }
+*/
 li > a   {
   text-decoration: none;
   display: block;

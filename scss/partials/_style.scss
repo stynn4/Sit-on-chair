@@ -63,15 +63,16 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   position: absolute;
   height: 68px;
   width: 364px;
+  display: block;
 }
 @mixin borderedTitle {
-    width:160px;
-    margin: 17px 0 0 16px;
-    position:absolute;
-    font-size: 16px;
-    font-family: map_get($fonts, 'medium');
-    letter-spacing: 1px;
-    border-bottom: 9px solid map_get($colors, 'main');
+  width:160px;
+  margin: 17px 0 0 16px;
+  position:absolute;
+  font-size: 16px;
+  font-family: map_get($fonts, 'medium');
+  letter-spacing: 1px;
+  border-bottom: 9px solid map_get($colors, 'main');
 }
 %text {
   text-transform: uppercase;
@@ -85,13 +86,13 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   position: relative;
 }
 @mixin circle1 {
-    height: 62px;
-    width: 62px;
-    border-radius: 50%;
-    position: absolute;
-    left:50%;
-    margin-left: -31px;
-    margin-top: -43px;
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  position: absolute;
+  left:50%;
+  margin-left: -31px;
+  margin-top: -43px;
 }
 @mixin circle2 {
   box-sizing: border-box;
@@ -151,19 +152,19 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   color: map_get($colors, 'boxesFont');
 }
 @mixin priceDivServisAdvice {
-    height: 53px;
-    width: 100%;
-    position: absolute;
-    font-size: 28px;
+  height: 53px;
+  width: 100%;
+  position: absolute;
+  font-size: 28px;
   color: map_get($colors, 'boxesFont');
 }
 @mixin priceJoin {
-    width: 134px;
-    height: 37px;
-    font-size: 18px;
-    text-transform: uppercase;
-    position:absolute;
-    padding: 9px 0 0 30px;
-    text-decoration: none;
-    border-radius: 7px;
+  width: 134px;
+  height: 37px;
+  font-size: 18px;
+  text-transform: uppercase;
+  position:absolute;
+  padding: 9px 0 0 30px;
+  text-decoration: none;
+  border-radius: 7px;
 }

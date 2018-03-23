@@ -1,5 +1,5 @@
 /*priceSection*/
-body > section:nth-of-type(3) {
+body section:nth-of-type(3) {
   height: 795px;
   background: map_get($colors, 'sectionBackground');
   /*background: map_get($colors, 'sectionBackground ');
@@ -182,8 +182,8 @@ body > section:nth-of-type(3) {
   background: map_get($colors, 'priceDiv1');
 }
 .priceBoxes > div:last-of-type > div:last-of-type {
-    @include priceDivServisAdvice();
-    top: 413px;
-    padding: 9px 0 0 62px;
-    background: map_get($colors, 'priceDiv2');
+  @include priceDivServisAdvice();
+  top: 413px;
+  padding: 9px 0 0 62px;
+  background: map_get($colors, 'priceDiv2');
 }
