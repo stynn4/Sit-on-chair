@@ -15,17 +15,17 @@ header > div > h4  {
   margin-left: 5px;
   color: map_get($colors, 'font');
 }
-h4 > span    {
+header h4 > span    {
   color: map-get($colors, 'main');
 }
-nav {
+header nav {
   float:right;
 }
-ul  {
+header ul  {
   list-style: none;
   position: relative;
 }
-ul > li {
+header ul > li {
   float: left;
   text-transform: uppercase;
   font-size: 14px;
@@ -35,7 +35,7 @@ ul > li {
   line-height: 42px;
   color: map_get($colors, 'font');
 }
-ul > li > ul {
+header ul > li > ul {
   width: 120px;
   height: 100px;
   position:absolute;
@@ -48,12 +48,12 @@ ul > li:hover > ul  {
   display:block;
 }
 */
-li > a   {
+header li > a   {
   text-decoration: none;
   display: block;
   color: map_get($colors, 'font');;
 }
-ul > li > ul > li {
+header ul > li > ul > li {
   text-transform: capitalize;
   background: map-get($colors, 'header');
   line-height: 16px;

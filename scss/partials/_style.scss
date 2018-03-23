@@ -36,6 +36,12 @@
   height: 555px;
 }
 /*arrow_slider*/
+@mixin sliderArrow {
+    position:absolute;
+    font-size: 84px;
+    color: map_get($colors, 'main');
+}
+/*
 @mixin sliderArrow() {
   content: '';
   width: 0;
@@ -45,6 +51,7 @@
   position: absolute;
   color: map_get($colors, 'main');
 }
+*/
 /*div_secondSection*/
 @mixin sectionFlex {
   display: flex;
