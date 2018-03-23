@@ -1,5 +1,5 @@
 /*slider*/
-section:first-of-type   {
+body > section:first-of-type   {
   @include sliderHeight;
   @include sliderGradient;
 }
