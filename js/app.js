@@ -36,7 +36,10 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     }
 
+/*sliderSection*/
 
+    var prevButton = document.querySelector('.arrowLeft'),
+        nextButton = document.querySelector('.arrowRight');
 
 
 });
