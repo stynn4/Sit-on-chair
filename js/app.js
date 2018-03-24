@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 /*imageSection*/
 
-    var secondSectionDivs = document.querySelectorAll('.secondSection > div'),
-        divWithTitle = document.querySelectorAll('.divTitle');
+    var secondSectionDivs = document.querySelectorAll('.secondSection > div');
 
     for(var i=0; i<secondSectionDivs.length-1; i++){
 
@@ -39,7 +38,52 @@ document.addEventListener('DOMContentLoaded', function(){
 /*sliderSection*/
 
     var prevButton = document.querySelector('.arrowLeft'),
-        nextButton = document.querySelector('.arrowRight');
+        nextButton = document.querySelector('.arrowRight'),
+        chairList = document.querySelectorAll('.sliderElement');
+
+    var index = 0;
+
+    chairList[0].classList.add('visible');
+
+    nextButton.addEventListener('click', function(){
+
+        chairList.forEach(function(element){
+            element.classList.remove('visible');
+        });
+
+        index++;
+
+        if(index === chairList.length) {
+
+            index = 0;
+
+        }
+
+        chairList[index].classList.add('visible');
+
+    });
+
+    prevButton.addEventListener('click', function(element){
+       console.log('prevbutton');
+
+       chairList.forEach(function(element){
+           element.classList.remove('visible');
+       });
+
+       index--;
+
+       if(index < 0) {
+
+           index = chairList.length-1;
+
+       }
+
+       chairList[index].classList.add('visible');
+
+    });
+
+/*drop-downList*/
+
 
 
 });
