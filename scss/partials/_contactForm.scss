@@ -3,29 +3,71 @@ body > section:nth-of-type(5) {
   height: 600px;
   background: lightblue;
 }
+.fourthSection {
+  @include clearFix();
+}
 .fourthSection > div:first-of-type > p {
   @include textUnderline();
   margin: 33px 0 0 4px;
 }
 .fourthSection > form {
-  height: 440px;
-  width: 698px;
-  background: lightcoral;
-  margin: 127px 0 0 3px;
-  padding: 0 0 0 0;
-  position:absolute;
+  height: 410px;
+  width: 60%;
+  margin-top: 127px;
+  float:left;
+  background: orange;
 }
-.fourthSection > form > label:first-of-type > input {
-  height: 73px;
-  width: 698px;
-  border: 1px solid map_get($colors, 'main');
-  padding: 0 0 0 0;
+.fourthSection > form > label:first-of-type > input,
+.fourthSection > form > label:nth-of-type(2) > input {
+  @include inputField();
   margin-bottom: 28px;
+  height: 73px;
 }
-.fourthSection > form > label:first-of-type > input::placeholder {
-  font-size: 35px;
-  font-family: map_get($fonts, 'thin');
+.fourthSection > form > label:first-of-type > input::placeholder,
+.fourthSection > form > label:last-of-type > textarea {
+  @include inputPlaceholder();
   text-transform: capitalize;
-  padding: 10px 0 0 15px;
+}
+
+.fourthSection > form > label:nth-of-type(2) > input::placeholder{
+  @include inputPlaceholder();
+}
+
+.fourthSection > form > label:last-of-type > textarea {
+  @include inputField();
+  height: 210px;
+  resize: none;
+}
+.fourthSection > div:last-of-type {
+  height: 410px;
+  width: 40%;
+  background:yellow;
+  float:right;
+  padding: 0 0 0 0;
+  margin: 127px 0 0 0;
+}
+.fourthSection > div:last-of-type > img {
+  width: 288px;
+  margin: -30px 0 0 65px;
+}
+.fourthSection > div:last-of-type > form {
+  height: 208px;
+  background: lightpink;
+}
+.fourthSection > div:last-of-type > form > label {
+  line-height: 20px;
+  font-size: 15px;
+}
+.fourthSection > div:last-of-type > form > input {
+  display: block;
+  opacity: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  cursor: pointer;
+}
+.fourthSection > div:last-of-type > form > input[type=checkbox]{
 
 }
+
+

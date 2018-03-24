@@ -190,3 +190,14 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
   text-decoration: none;
   border-radius: 7px;
 }
+/*contactForm*/
+@mixin inputField {
+  width: 698px;
+  border: 1px solid map_get($colors, 'main');
+  padding: 14px 0 0 15px;
+  margin-left: 3px;
+}
+@mixin inputPlaceholder {
+    font-size: 35px;
+    font-family: map_get($fonts, 'thin');
+}
