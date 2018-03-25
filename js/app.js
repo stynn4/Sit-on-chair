@@ -84,6 +84,50 @@ document.addEventListener('DOMContentLoaded', function(){
 
 /*drop-downList*/
 
+    var listArrow = document.querySelectorAll('.list_arrow'),
+        lists = document.querySelectorAll('.list_panel');
+
+    console.log(listArrow[0].nextElementSibling.children[0]);
+
+
+    /*for(var i=0; i<listArrow.length; i++){
+        listArrow[i].addEventListener('click', function(){
+
+                if(this.nextElementSibling.style.display !== 'block') {
+                    this.nextElementSibling.style.display = 'block';
+                }   else {
+                    this.nextElementSibling.style.display = 'none';
+                }
+
+
+
+        })
+    }
+*/
+console.log(lists);
+console.log(lists[0]);
+console.log(lists[0].children.length);
+console.log(listArrow[0].nextElementSibling.children.length);
+
+    for(var i=0; i<listArrow.length; i++){
+        listArrow[i].addEventListener('click', function(){
+
+            this.nextElementSibling.style.display = 'block';
+        })
+
+        for(var j=0; j<listArrow[i].nextElementSibling.children.length; j++){
+            listArrow[i].nextElementSibling.children[j].addEventListener('click', function(){
+                this.parentElement.style.display = 'none';
+            })
+        }
+
+    }
+
+
+
+
+
+
 
 
 });
