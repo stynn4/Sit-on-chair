@@ -85,34 +85,27 @@ document.addEventListener('DOMContentLoaded', function(){
 /*drop-downList*/
 
     var listArrow = document.querySelectorAll('.list_arrow'),
-        lists = document.querySelectorAll('.list_panel');
+        lists = document.querySelectorAll('.list_panel'),
+        listsChildren = lists[0].children,
+        summaryColor = document.querySelector('.color'),
+        summaryPattern = document.querySelector('.pattern'),
+        summaryTransport = document.querySelector('.transport'),
+        valueColor = document.querySelector('.color_value'),
+        valuePattern = document.querySelector('.pattern_value'),
+        valueTransport = document.querySelector('.transport_value');
 
-    console.log(listArrow[0].nextElementSibling.children[0]);
-
-
-    /*for(var i=0; i<listArrow.length; i++){
-        listArrow[i].addEventListener('click', function(){
-
-                if(this.nextElementSibling.style.display !== 'block') {
-                    this.nextElementSibling.style.display = 'block';
-                }   else {
-                    this.nextElementSibling.style.display = 'none';
-                }
-
-
-
-        })
-    }
-*/
-console.log(lists);
-console.log(lists[0]);
-console.log(lists[0].children.length);
-console.log(listArrow[0].nextElementSibling.children.length);
+    console.log(listsChildren);
+    console.log(document.querySelectorAll('.list_panel > li'));
+/*
 
     for(var i=0; i<listArrow.length; i++){
         listArrow[i].addEventListener('click', function(){
 
-            this.nextElementSibling.style.display = 'block';
+            if(this.nextElementSibling.style.display !== 'block') {
+                this.nextElementSibling.style.display = 'block';
+            }   else {
+                this.nextElementSibling.style.display = 'none';
+            }
         })
 
         for(var j=0; j<listArrow[i].nextElementSibling.children.length; j++){
@@ -122,9 +115,41 @@ console.log(listArrow[0].nextElementSibling.children.length);
         }
 
     }
+*/
+console.log(lists[0].children);
+    listArrow[0].addEventListener('click', function(){
+
+        if(lists[0].style.display !== 'block'){
+            lists[0].style.display = 'block';
+        }   else {
+            lists[0].style.display = 'none';
+        }
 
 
 
+    })
+
+
+
+
+    listArrow[1].addEventListener('click', function(){
+
+        if(lists[1].style.display !== 'block'){
+            lists[1].style.display = 'block';
+        }   else {
+            lists[1].style.display = 'none';
+        }
+    })
+
+
+    listArrow[2].addEventListener('click', function(){
+
+        if(lists[2].style.display !== 'block'){
+            lists[2].style.display = 'block';
+        }   else {
+            lists[2].style.display = 'none';
+        }
+    })
 
 
 
