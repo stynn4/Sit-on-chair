@@ -18,20 +18,16 @@ body > section:first-of-type   {
   margin: 257px 0 0 1121px;
 }
 */
+
 .arrowLeft {
+  @include sliderArrow();
   position: absolute;
   margin: 230px 0 0 9px;
 }
 .arrowRight {
+  @include sliderArrow();
   position:absolute;
   margin: 230px 0 0 1117px;
-}
-.arrowLeft > a, .arrowRight > a {
-  @include sliderArrow();
-  text-decoration: none;
-}
-.arrowLeft > a:hover, .arrowRight > a:hover{
-  @include arrowLink();
 }
 .slider .sliderElement > div {
   float: left;

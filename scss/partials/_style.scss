@@ -41,10 +41,6 @@
   color: map_get($colors, 'main');
   text-decoration: none;
 }
-@mixin arrowLink {
-  text-decoration: none;
-  color: map_get($colors, 'main');
-}
 /*
 @mixin sliderArrow() {
   content: '';
@@ -194,7 +190,6 @@ $images: (secondSectionImg1: url("../images/box1_img.jpg"),
 @mixin inputField {
   width: 698px;
   border: 1px solid map_get($colors, 'main');
-  padding: 14px 0 0 15px;
   margin-left: 3px;
 }
 @mixin inputPlaceholder {

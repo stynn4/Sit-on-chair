@@ -1,7 +1,6 @@
 /*contactForm*/
 body > section:nth-of-type(5) {
   height: 600px;
-  background: lightblue;
 }
 .fourthSection {
   @include clearFix();
@@ -15,21 +14,21 @@ body > section:nth-of-type(5) {
   width: 60%;
   margin-top: 127px;
   float:left;
-  background: orange;
 }
 .fourthSection > form > label:first-of-type > input,
 .fourthSection > form > label:nth-of-type(2) > input {
   @include inputField();
+  padding-left:  15px;
   margin-bottom: 28px;
   height: 73px;
 }
-.fourthSection > form > label:first-of-type > input::placeholder,
+.fourthSection > form > label:first-of-type > input,
 .fourthSection > form > label:last-of-type > textarea {
   @include inputPlaceholder();
   text-transform: capitalize;
 }
 
-.fourthSection > form > label:nth-of-type(2) > input::placeholder{
+.fourthSection > form > label:nth-of-type(2) > input{
   @include inputPlaceholder();
 }
 
@@ -37,11 +36,11 @@ body > section:nth-of-type(5) {
   @include inputField();
   height: 210px;
   resize: none;
+  padding: 13px 0 0 15px;
 }
 .fourthSection > div:last-of-type {
   height: 410px;
   width: 40%;
-  background:yellow;
   float:right;
   padding: 0 0 0 0;
   margin: 127px 0 0 0;
@@ -51,23 +50,42 @@ body > section:nth-of-type(5) {
   margin: -30px 0 0 65px;
 }
 .fourthSection > div:last-of-type > form {
-  height: 208px;
-  background: lightpink;
+  height: 195px;
+  width: 379px;
+  margin: 12px 0 0 40px;
 }
 .fourthSection > div:last-of-type > form > label {
-  line-height: 20px;
-  font-size: 15px;
+  width: 310px;
+  float: right;
+  margin-top: 26px;
+  font-size: 22px;
+  color: map_get($colors, 'footerFont2');
+  font-family: map_get($fonts, 'thin');
+}
+.fourthSection > div:last-of-type > form > label:first-letter {
+  text-transform: uppercase;
 }
 .fourthSection > div:last-of-type > form > input {
   display: block;
-  opacity: 0;
   height: 48px;
-  position: absolute;
   width: 48px;
-  cursor: pointer;
+  position: absolute;
+  margin: 25px 0 0 2px;
+  float: left;
+  color: map_get($colors, 'main');
+  border: 1px solid map_get($colors, 'main');
 }
-.fourthSection > div:last-of-type > form > input[type=checkbox]{
-
+.fourthSection > div:last-of-type > form > a   {
+  border-radius: 13px;
+  padding: 19px 126px 20px 127px;
+  margin-top: 116px;
+  font-size: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: map_get($colors, 'main');
+  color: map_get($colors, 'font');
+  font-family: map_get($fonts, 'semiBold');
+  position: absolute;
 }
 
 
