@@ -35,11 +35,14 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     }
 
+
 /*sliderSection*/
+
 
     var prevButton = document.querySelector('.arrowLeft'),
         nextButton = document.querySelector('.arrowRight'),
         chairList = document.querySelectorAll('.sliderElement');
+
 
     var index = 0;
 
@@ -53,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         index++;
 
-        if(index === chairList.length) {
+        if(index >= chairList.length) {
 
             index = 0;
 
@@ -64,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     prevButton.addEventListener('click', function(element){
-       console.log('prevbutton');
 
        chairList.forEach(function(element){
            element.classList.remove('visible');
@@ -85,8 +87,9 @@ document.addEventListener('DOMContentLoaded', function(){
 /*drop-downList*/
 
     var listArrow = document.querySelectorAll('.list_arrow'),
-        lists = document.querySelectorAll('.list_panel'),
-        listsChildren = lists[0].children,
+        list = document.querySelectorAll('.list_panel'),
+        listsChildren = list[0].children,
+        transportField = document.getElementById('transport'),
         summaryColor = document.querySelector('.color'),
         summaryPattern = document.querySelector('.pattern'),
         summaryTransport = document.querySelector('.transport'),
@@ -94,9 +97,7 @@ document.addEventListener('DOMContentLoaded', function(){
         valuePattern = document.querySelector('.pattern_value'),
         valueTransport = document.querySelector('.transport_value');
 
-    console.log(listsChildren);
-    console.log(document.querySelectorAll('.list_panel > li'));
-/*
+
 
     for(var i=0; i<listArrow.length; i++){
         listArrow[i].addEventListener('click', function(){
@@ -115,44 +116,48 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
     }
-*/
-console.log(lists[0].children);
-    listArrow[0].addEventListener('click', function(){
 
-        if(lists[0].style.display !== 'block'){
-            lists[0].style.display = 'block';
-        }   else {
-            lists[0].style.display = 'none';
+
+        if(transportField.checked != true){
+            console.log('not checked');
+        } else {
+        console.log( 'chcekd')
         }
 
 
+/*
+    listArrow[0].addEventListener('click', function(){
+
+        if(list[0].style.display !== 'block'){
+            list[0].style.display = 'block';
+        }   else {
+            list[0].style.display = 'none';
+        }
 
     })
 
 
-
-
     listArrow[1].addEventListener('click', function(){
 
-        if(lists[1].style.display !== 'block'){
-            lists[1].style.display = 'block';
+        if(list[1].style.display !== 'block'){
+            list[1].style.display = 'block';
         }   else {
-            lists[1].style.display = 'none';
+            list[1].style.display = 'none';
         }
     })
 
 
     listArrow[2].addEventListener('click', function(){
 
-        if(lists[2].style.display !== 'block'){
-            lists[2].style.display = 'block';
+        if(list[2].style.display !== 'block'){
+            list[2].style.display = 'block';
         }   else {
-            lists[2].style.display = 'none';
+            list[2].style.display = 'none';
         }
     })
 
 
 
-
+*/
 
 });
