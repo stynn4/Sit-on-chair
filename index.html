@@ -233,25 +233,26 @@
             </div>
 
            <form>
-                <label>
-                    <input type="text" name="name" placeholder="imię">
-                </label>
-                <label>
-                    <input type="email" name="email" placeholder="email">
-                </label>
-                <label>
-                    <textarea col="10" rows="" placeholder="wiadomość"></textarea>
-                </label>
-            </form>
-
-            <div>
-                <img src="images/red_chair.png" alt="red_chair">
-                <form>
-                    <input type="checkbox" name="agreement" id="agreement" checked>
-                    <label for="agreement">zgadzam się na przetwarzanie danych osobowych</label>
+                <div id="leftForm">
+                    <label>
+                        <input type="text" name="name" placeholder="imię">
+                    </label>
+                    <label>
+                        <input type="email" name="email" placeholder="email">
+                    </label>
+                    <label>
+                        <textarea col="10" rows="10" placeholder="wiadomość"></textarea>
+                    </label>
+                </div>
+                <div id="rightForm">
+                    <img src="images/red_chair.png" alt="red_chair">
+                   <div class="checkbox check-box">
+                        <input type="checkbox" name="agreement" id="agreement" checked>
+                        <label for="agreement">zgadzam się na przetwarzanie danych osobowych</label>
+                    </div>
                     <a href="">wyślij</a>
-                </form>
-            </div>
+                </div>          
+            </form>
         </div>
     </section>
 
