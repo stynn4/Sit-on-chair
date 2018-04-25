@@ -23,11 +23,13 @@ body > section:first-of-type   {
   @include sliderArrow();
   position: absolute;
   margin: 230px 0 0 9px;
+  cursor: pointer;
 }
 .arrowRight {
   @include sliderArrow();
   position:absolute;
   margin: 230px 0 0 1117px;
+  cursor: pointer;
 }
 .slider .sliderElement > div {
   float: left;

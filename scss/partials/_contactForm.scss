@@ -5,80 +5,89 @@ body > section:nth-of-type(5) {
 .fourthSection {
   @include clearFix();
 }
-.fourthSection > div:first-of-type > p {
+.fourthSection > div {
+  height: 100px;
+}
+.fourthSection > div > p {
   @include textUnderline();
   margin: 33px 0 0 4px;
 }
-.fourthSection > form {
+
+.fourthSection #leftForm {
   height: 410px;
   width: 60%;
-  margin-top: 127px;
   float:left;
 }
-.fourthSection > form > label:first-of-type > input,
-.fourthSection > form > label:nth-of-type(2) > input {
+.fourthSection #rightForm {
+  width: 40%;
+  float:right;
+}
+
+.fourthSection > form label:first-of-type > input, 
+.fourthSection > form label:nth-of-type(2) > input{
   @include inputField();
+  @include inputPlaceholder();
   padding-left:  15px;
   margin-bottom: 28px;
   height: 73px;
 }
-.fourthSection > form > label:first-of-type > input,
-.fourthSection > form > label:last-of-type > textarea {
-  @include inputPlaceholder();
+.fourthSection > form label:first-of-type > input{
+  margin-top: 25px;
   text-transform: capitalize;
 }
 
-.fourthSection > form > label:nth-of-type(2) > input{
-  @include inputPlaceholder();
-}
-
-.fourthSection > form > label:last-of-type > textarea {
+.fourthSection > form label:nth-of-type(3) > textarea {
   @include inputField();
-  height: 210px;
+  @include inputPlaceholder();
+  text-transform: capitalize;
+  height: 208px;
   resize: none;
   padding: 13px 0 0 15px;
 }
-.fourthSection > div:last-of-type {
-  height: 410px;
-  width: 40%;
-  float:right;
-  padding: 0 0 0 0;
-  margin: 127px 0 0 0;
+
+#rightForm > img {
+ width: 288px;
+ margin: -5px 0 0 65px;
 }
-.fourthSection > div:last-of-type > img {
-  width: 288px;
-  margin: -30px 0 0 65px;
+
+#rightForm .checkbox {
+  @include checkbox;
+  margin: 4px 0 0 45px;
 }
-.fourthSection > div:last-of-type > form {
-  height: 195px;
-  width: 379px;
-  margin: 12px 0 0 40px;
+
+#rightForm .checkbox input {
+  @include checkboxInput;
 }
-.fourthSection > div:last-of-type > form > label {
-  width: 310px;
-  float: right;
-  margin-top: 26px;
+
+#rightForm .checkbox label {
+  display: block;
+  padding-left: 65px;
+  position: relative;
   font-size: 22px;
-  color: map_get($colors, 'footerFont2');
-  font-family: map_get($fonts, 'thin');
+  color: #cecece;
+  cursor: pointer;
 }
-.fourthSection > div:last-of-type > form > label:first-letter {
+
+#rightForm .checkbox label::first-letter {
   text-transform: uppercase;
 }
-.fourthSection > div:last-of-type > form > input {
-  display: block;
-  height: 48px;
-  width: 48px;
-  position: absolute;
-  margin: 25px 0 0 2px;
-  float: left;
-  color: map_get($colors, 'main');
-  border: 1px solid map_get($colors, 'main');
+
+#rightForm .checkbox label::before, .checkbox label::after {
+  @include checkboxLabelBeforeAfter;
 }
-.fourthSection > div:last-of-type > form > a   {
+
+#rightForm .checkbox label::after {
+  @include checkboxLabelAfter;
+}
+
+#rightForm .checkbox input:checked + label::after {
+  @include checkboxInputCheckedLabelAfter;
+}
+
+.fourthSection #rightForm a   {
   border-radius: 13px;
-  padding: 19px 126px 20px 127px;
-  margin-top: 116px;
+  padding: 19px 126px 19px 127px;
+  margin: 12px 0 0 42px;
   font-size: 35px;
   text-decoration: none;
   text-transform: uppercase;
@@ -87,5 +96,3 @@ body > section:nth-of-type(5) {
   font-family: map_get($fonts, 'semiBold');
   position: absolute;
 }
-
-
