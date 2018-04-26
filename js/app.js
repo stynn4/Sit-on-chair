@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var prevButton = document.querySelector('.arrowLeft'),
         nextButton = document.querySelector('.arrowRight'),
         chairList = document.querySelectorAll('.sliderElement');
-
-
+       
     var index = 0;
 
     chairList[0].classList.add('visible');
@@ -89,134 +88,119 @@ document.addEventListener('DOMContentLoaded', function(){
     var listArrow = document.querySelectorAll('.list_arrow'),
         list = document.querySelectorAll('.list_panel'),
         transportField = document.getElementById('transport'),
-        checkboxLabel = document.querySelector('.checkbox > label'),
-        summaryColor = document.querySelector('.color'),
-        summaryPattern = document.querySelector('.pattern'),
-        summaryTransport = document.querySelector('.transport'),
-        valueColor = document.querySelector('.color_value'),
-        valuePattern = document.querySelector('.pattern_value'),
-        valueTransport = document.querySelector('.transport_value'),
-        sum = document.querySelector('.sum');
-
-
+        checkboxLabel = document.querySelector('.checkbox > label'), 
+        sum = document.querySelector('.sum'),
+        img = document.querySelector('.image_part img');
+        
+    //rozwijanie listy   
     for(var i=0; i<listArrow.length; i++){
+
         listArrow[i].addEventListener('click', function(){
 
             if(this.nextElementSibling.style.display !== 'block') {
+
                 this.nextElementSibling.style.display = 'block';
+
             }   else {
+
                 this.nextElementSibling.style.display = 'none';
             }
         })
 
         for(var j=0; j<listArrow[i].nextElementSibling.children.length; j++){
+
             listArrow[i].nextElementSibling.children[j].addEventListener('click', function(){
+                
                 this.parentElement.style.display = 'none';
+
             })
         }
 
     }
 
+    //checkbox transport
     transportField.addEventListener('click', function(){
         
         if(this.checked) {
-            console.log('checked')
+           
+            var transport = document.querySelector('.transport');
+            var transportValue = document.querySelector('.panel_right .transport_value')
+            
             checkboxLabel.classList.add('active');
-
-            let transport = document.querySelector('.transport');
-            let transportValue = document.querySelector('.panel_right .transport_value')
-            let sum = document.querySelector('.sum');
-
             transport.innerText = checkboxLabel.innerText;
             transportValue.innerText = this.dataset.price;
             sum.innerText = Number(this.dataset.price) + Number(sum.innerText);
             
         } else {
-            console.log('not checked')
+          
             checkboxLabel.classList.remove('active');
+
         }
     })
 
+
+    // summary
     for(var i=0; i<list[0].children.length; i++){
+
         list[0].children[i].addEventListener('click', function(){
         
-            let title = document.querySelector('.panel_left .title');
-            let titleValue = document.querySelector('.panel_right .title_value');
-            let sum = document.querySelector('.sum');
+            var title = document.querySelector('.panel_left .title');
+            var titleValue = document.querySelector('.panel_right .title_value');
+            
             title.innerText = this.innerText;
             titleValue.innerText = this.dataset.price;
             sum.innerText = Number(this.dataset.price);
+
+            if(this.innerText === 'Clair'){
+
+                img.setAttribute('src', 'images/red_chair.png');
+                img.classList.remove('blackChair');
+                img.classList.add('redChair');
+
+            } else if (this.innerText === 'Margarita') {
+
+                img.setAttribute('src', 'images/black_chair.png');
+                img.classList.remove('redChair');
+                img.classList.add('blackChair');
+
+            } else if(this.innerText === 'Selena'){
+
+                img.setAttribute('src', 'images/red_chair.png');
+                img.classList.remove('blackChair');
+                img.classList.add('redChair');
+
+            }
         
         })
     }
 
     for(var i=0; i<list[1].children.length; i++){
+
         list[1].children[i].addEventListener('click', function(){
             
-            let color = document.querySelector('.panel_left .color');
-            let colorValue = document.querySelector('.panel_right .color_value');
-            let sum = document.querySelector('.sum');
+            var color = document.querySelector('.panel_left .color');
+            var colorValue = document.querySelector('.panel_right .color_value');
 
             color.innerText = this.innerText;
             colorValue.innerText = this.dataset.price;
             sum.innerText = Number(this.dataset.price) + Number(sum.innerText);
+
         })
     }
 
     for(var i=0; i<list[2].children.length; i++){
+
         list[2].children[i].addEventListener('click', function(){
 
-            let pattern = document.querySelector('.panel_left .pattern');
-            let patternValue = document.querySelector('.panel_right .pattern_value');
-            let sum = document.querySelector('.sum');
-
+            var pattern = document.querySelector('.panel_left .pattern');
+            var patternValue = document.querySelector('.panel_right .pattern_value');
+     
             pattern.innerText = this.innerText;
             patternValue.innerText = this.dataset.price;
             sum.innerText = Number(this.dataset.price) + Number(sum.innerText);
+            
         })
     }
 
-
-sum = 
-    console.log(sum.innerText)
-
     
-      
-
-
-/*
-    listArrow[0].addEventListener('click', function(){
-
-        if(list[0].style.display !== 'block'){
-            list[0].style.display = 'block';
-        }   else {
-            list[0].style.display = 'none';
-        }
-
-    })
-
-
-    listArrow[1].addEventListener('click', function(){
-
-        if(list[1].style.display !== 'block'){
-            list[1].style.display = 'block';
-        }   else {
-            list[1].style.display = 'none';
-        }
-    })
-
-
-    listArrow[2].addEventListener('click', function(){
-
-        if(list[2].style.display !== 'block'){
-            list[2].style.display = 'block';
-        }   else {
-            list[2].style.display = 'none';
-        }
-    })
-
-
-
-*/
-
 });
