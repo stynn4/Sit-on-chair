@@ -111,15 +111,16 @@ body > section:nth-of-type(3) {
   font-size: 55px;
   color: map_get($colors, 'boxMain');
   border: 3px solid map_get($colors, 'price1_3Background');
-  padding: 29px 0 0 34px;
+  padding: 22px 0 0 31px;
 }
 #circlePriceMiddle > sup {
   font-size: 15px;
   position:absolute;
+  margin: 8px 0 0 -3px;
 }
 #circlePriceMiddle > span {
   @include priceCircleSpan();
-  margin: -5px 0 0 -10px;
+  margin: 3px 0 0 -8px;
 }
 #secondBox > div:nth-of-type(3) {
   @include priceDivBuyWarrancy();
