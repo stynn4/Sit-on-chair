@@ -1,9 +1,0 @@
-.sliderList ul {
-    list-style: none;
-}
-.sliderList li {
-    display: none;
-}
-.sliderList .visible {
-    display: inline-block;
-}
