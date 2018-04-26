@@ -88,15 +88,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var listArrow = document.querySelectorAll('.list_arrow'),
         list = document.querySelectorAll('.list_panel'),
-        listsChildren = list[0].children,
         transportField = document.getElementById('transport'),
+        checkboxLabel = document.querySelector('.checkbox > label'),
         summaryColor = document.querySelector('.color'),
         summaryPattern = document.querySelector('.pattern'),
         summaryTransport = document.querySelector('.transport'),
         valueColor = document.querySelector('.color_value'),
         valuePattern = document.querySelector('.pattern_value'),
-        valueTransport = document.querySelector('.transport_value');
-
+        valueTransport = document.querySelector('.transport_value'),
+        sum = document.querySelector('.sum');
 
 
     for(var i=0; i<listArrow.length; i++){
@@ -117,12 +117,71 @@ document.addEventListener('DOMContentLoaded', function(){
 
     }
 
+    transportField.addEventListener('click', function(){
+        
+        if(this.checked) {
+            console.log('checked')
+            checkboxLabel.classList.add('active');
 
-        if(transportField.checked != true){
-            console.log('not checked');
+            let transport = document.querySelector('.transport');
+            let transportValue = document.querySelector('.panel_right .transport_value')
+            let sum = document.querySelector('.sum');
+
+            transport.innerText = checkboxLabel.innerText;
+            transportValue.innerText = this.dataset.price;
+            sum.innerText = Number(this.dataset.price) + Number(sum.innerText);
+            
         } else {
-        console.log( 'chcekd')
+            console.log('not checked')
+            checkboxLabel.classList.remove('active');
         }
+    })
+
+    for(var i=0; i<list[0].children.length; i++){
+        list[0].children[i].addEventListener('click', function(){
+        
+            let title = document.querySelector('.panel_left .title');
+            let titleValue = document.querySelector('.panel_right .title_value');
+            let sum = document.querySelector('.sum');
+            title.innerText = this.innerText;
+            titleValue.innerText = this.dataset.price;
+            sum.innerText = Number(this.dataset.price);
+        
+        })
+    }
+
+    for(var i=0; i<list[1].children.length; i++){
+        list[1].children[i].addEventListener('click', function(){
+            
+            let color = document.querySelector('.panel_left .color');
+            let colorValue = document.querySelector('.panel_right .color_value');
+            let sum = document.querySelector('.sum');
+
+            color.innerText = this.innerText;
+            colorValue.innerText = this.dataset.price;
+            sum.innerText = Number(this.dataset.price) + Number(sum.innerText);
+        })
+    }
+
+    for(var i=0; i<list[2].children.length; i++){
+        list[2].children[i].addEventListener('click', function(){
+
+            let pattern = document.querySelector('.panel_left .pattern');
+            let patternValue = document.querySelector('.panel_right .pattern_value');
+            let sum = document.querySelector('.sum');
+
+            pattern.innerText = this.innerText;
+            patternValue.innerText = this.dataset.price;
+            sum.innerText = Number(this.dataset.price) + Number(sum.innerText);
+        })
+    }
+
+
+sum = 
+    console.log(sum.innerText)
+
+    
+      
 
 
 /*
