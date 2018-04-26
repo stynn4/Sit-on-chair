@@ -120,12 +120,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
     //checkbox transport
     transportField.addEventListener('click', function(){
-        
-        if(this.checked) {
+        var transport = document.querySelector('.transport');
+        var transportValue = document.querySelector('.panel_right .transport_value')
+
+        if(this.checked === true) {
            
-            var transport = document.querySelector('.transport');
-            var transportValue = document.querySelector('.panel_right .transport_value')
-            
+            this.dataset.price = '200';
             checkboxLabel.classList.add('active');
             transport.innerText = checkboxLabel.innerText;
             transportValue.innerText = this.dataset.price;
@@ -134,6 +134,10 @@ document.addEventListener('DOMContentLoaded', function(){
         } else {
           
             checkboxLabel.classList.remove('active');
+            sum.innerText = Number(sum.innerText) - Number(this.dataset.price);
+            this.dataset.price = '0';
+            transport.innerText = checkboxLabel.innerText;
+            transportValue.innerText = this.dataset.price;
 
         }
     })
