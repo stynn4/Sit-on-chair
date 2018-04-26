@@ -64,7 +64,7 @@ body {
   line-height: 120%;
   padding-top: 10px;
 }
-
+/* => app.js
 .application .checkbox label::before, .checkbox label::after {
   @include checkboxLabelBeforeAfter;
 }
@@ -75,13 +75,12 @@ body {
 .application .checkbox input:checked + label::after {
   @include checkboxInputCheckedLabelAfter;
 }
-
+*/
 
 .active {
-  background: url('../images/form_ok.jpg');
-  width: 48px;
+  background: url('../images/form_ok.jpg') no-repeat center/contain;
+  width: 40px;
   height: 40px;
-
 }
 .inline_text {
   display: inline-block;
@@ -107,7 +106,7 @@ body {
 
 .summary_panel {
   background-color: white;
-  width:100%;
+  width:300px;
   height:195px;
   padding:10px;
   margin-top: 50px;
@@ -129,7 +128,7 @@ body {
 }
 .panel_left {
   display: inline-block;
-  width: 185px;
+  width: 40%;
   vertical-align: top;
   padding-bottom:10px;
   border-bottom:1px solid #e7e7e7;
@@ -137,7 +136,7 @@ body {
 }
 .panel_right {
   display: inline-block;
-  width: 100px;
+  width: 30%;
   border-left:1px solid #e7e7e7;
   text-align: right;
   vertical-align: top;
@@ -170,7 +169,7 @@ body {
 }
 .sum {
   display: inline-block;
-  width: 100px;
+  width: 30%;
   text-align: right;
   margin-top: 10px;
   font-size: 22px;
